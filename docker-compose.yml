@@ -1,0 +1,13 @@
+version: '2'
+services:
+  ansible:
+    image: 'williamyeh/ansible:ubuntu16.04'
+    hostname: 'ansible'
+    domainname: 'bedule-conseil.fr'
+    ports:
+      - '5222:22'
+    volumes:
+      - 'data:/home/ansible'
+volumes:
+  data:
+    driver: 'local'
